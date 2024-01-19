@@ -1,0 +1,38 @@
+.required-star::after{
+    content:"*";
+    color:red;
+    margin:2px;
+}
+.container{
+    background-color:#3187a4;
+}
+
+ .rating {
+    display: inline-block;
+    font-size: 2rem;
+}
+    
+ .rating input {
+    display: none;
+ }
+.rating label {
+    cursor: pointer;
+    color: #FFD700;
+ }
+    
+.rating label:hover,
+.rating label:hover~label {
+    color: #FFD700;
+}
+    
+.rating input:checked~label {
+    color: #FFD700;
+}
+    
+.rating label:hover:before,
+.rating label:hover~label:before,
+.rating input:checked~label:before {
+    content: '\2605';
+            /* Unicode character for a solid star */
+    position: absolute;
+ }
